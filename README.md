@@ -44,6 +44,6 @@ A consonant is any letter that is not a vowel (a, e, i , o ,u):
 
 Simply enter the number of syllables you want the first and last name to have.
 
-The generator will generate 11 possibilities for the first name (FN) and last name (LN).
+The generator will generate 16 possibilities for the first name (FN) and last name (LN).
 
 Feel free to add/remove vowels and consonants in this program as you see fit.
