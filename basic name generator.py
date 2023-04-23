@@ -2,6 +2,10 @@
 
 import random
 
+print("(Press Ctrl + C to quit.)")
+
+print(" ")
+
 # 1. INITIALIZE VARIABLES AND LISTS
 # Initialize vowels
 vowelInitial = "a e i o u"
@@ -74,33 +78,33 @@ while True:
     # [1:] removes the first letter
     # [:-1] removes the last letter
 
-    # normal possibility (consonant + vowel pattern)
-    poss1 = FNstring.capitalize() + " " + LNstring.capitalize()
+    # (ex. Duna)
+    FNposs1 = FNstring.capitalize()
+    LNposs1 = LNstring.capitalize()
 
-    # possibilities where the first letter (consonant) is removed
-    poss2 = FNstring[1:].capitalize() + " " + LNstring.capitalize()
-    poss3 = FNstring.capitalize() + " " + LNstring[1:].capitalize()
-    poss4 = FNstring[1:].capitalize() + " " + LNstring[1:].capitalize() 
+    # (ex. Dunas)
+    FNposs2 = FNstring.capitalize() + random.choice(consonant)
+    LNposs2 = LNstring.capitalize() + random.choice(consonant)
 
-    # possibiliies where the last letter (vowel) is removed and a vowel is added at the beginning
-    poss5 = (random.choice(vowel) + FNstring[:-1]).capitalize() + " " + LNstring.capitalize()
-    poss6 = FNstring.capitalize() + " " + (random.choice(vowel) +  LNstring[:-1]).capitalize()
-    poss7 = (random.choice(vowel) +  FNstring[:-1]).capitalize() + " " + (random.choice(vowel) + LNstring[:-1]).capitalize()
+    # (ex. Una)
+    FNposs3 = FNstring[1:].capitalize()
+    LNposs3 = LNstring[1:].capitalize()
 
-    print(" ")
+    # (ex. Unas)
+    FNposs4 = FNstring[1:].capitalize() + random.choice(consonant)
+    LNposs4 = LNstring[1:].capitalize() + random.choice(consonant)
 
-    print(poss1)
-    print(poss2)
-    print(poss3)
-    print(poss4)
-    print(poss5)
-    print(poss6)
-    print(poss7)
+    # Combine possibilities into lists
+    FNposs = [FNposs1, FNposs2, FNposs3, FNposs4]
+    LNposs = [LNposs1, LNposs2, LNposs3, LNposs4]
 
-    print(" ")
+    # For loop to print possibilities
+    for x in FNposs:
+        for y in LNposs:
+            print(x, y)
 
 
-    # 6. CLEAR FIRST AND LAST NAME LISTS
+    # 5. CLEAR FIRST AND LAST NAME LISTS
     # Clear first and last name lists before the while loop starts again
     FNlist.clear()
     LNlist.clear()
